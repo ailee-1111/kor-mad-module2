@@ -10,6 +10,11 @@
 * Apache Tomcat 대신 Red Hat JBoss 웹 서버를 런타임으로 사용하여 새롭고 현대화된 애플리케이션을 빌드하고 배포하려면 OpenShift 바이너리 빌드 전략을 사용합니다.
 * 새로운 **customers** 서비스 테스트
 
+아래의 명령어들은 VS Code의 터미널에서 실행합니다.
+
+image::terminal.png[terminal]
+
+
 == 3.1. 새 프로젝트 만들기
 
 [IMPORTANT]
