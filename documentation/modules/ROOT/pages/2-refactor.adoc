@@ -27,6 +27,9 @@ image::applicationConfiguration-class.png[애플리케이션 구성 클래스]
 
 === 2.2.1. Spring PropertySource 주석 추가
 
+image::persistenceconfig.png[주석추가]
+
+
 `PersistenceConfig` 퍼블릭 클래스 위에 다음 주석을 추가합니다.
 
 [.console-input]
@@ -114,7 +117,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 [IMPORTANT]
 ====
-클래스에서 패키지 이름을 제거하지 않도록 주의하세요. 그러면 최종 결과가 이와 같습니다.
+클래스에서 아래의 패키지 이름을 제거하지 않도록 주의하세요.
 ====
 
 [.console-output]
@@ -128,6 +131,9 @@ package io.konveyor.demo.ordermanagement.config;
 이러한 변경 사항을 통해 더 이상 외부 상용 라이브러리를 참조할 필요가 없습니다. Maven 프로젝트에서 종속성을 쉽게 제거하거나 주석 처리할 수 있습니다.
 
 `pom.xml` 을 열고 다음 `config-utils` 종속성을 주석 처리(또는 제거)합니다.
+
+image::pom.png[pom-수정]
+
 
 [.console-input]
 [source,xml,subs="+attributes,macros+"]
@@ -168,6 +174,8 @@ image::update-app-props.png[업데이트-앱-속성]
 === 2.2.7. 빌드 테스트
 
 VS Code 서버에서 `Terminal` 창으로 이동합니다. 그런 다음 customer 애플리케이션을 다시 빌드하고 패키징합니다.
+
+image::terminal.png[터미널]
 
 [.console-input]
 [source,sh,subs="+attributes,macros+"]
@@ -271,7 +279,7 @@ image::add-applications.png[애플리케이션 추가]
 
 `Next` 를 클릭하세요.
 
-이제 변환 대상에 대한 옵션이 표시됩니다. 이전과 마찬가지로 애플리케이션 분석에 대한 매개변수로 `Containers`, `Linux`, `OpenJDK` 를 클릭합니다.
+이제 변환 대상에 대한 옵션이 표시됩니다. 이전과 마찬가지로 애플리케이션 분석에 대한 매개변수로 `Containerization`, `Linux`, `OpenJDK` 를 클릭합니다.
 
 image::configure-analysis-checked.png[분석 구성]
 
